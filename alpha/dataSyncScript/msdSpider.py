@@ -88,11 +88,32 @@ class MakeFolder(object):
             print("%s 数据已存在" % (next_path.split('/')[-1]))
 
 
+class DataProcess(object):
+    def __init__(self):
+        self.path = os.getcwd() + "\\dataSource\\Symptoms" + "\\全身\\呃逆\\呃逆.html"
+        print(self.path)
+
+    def resolve_data(self):
+        try:
+            f = open(self.path, 'r', encoding='utf-8')
+            f_content = f.read()
+            f.close()
+            data_soup = BeautifulSoup(f_content, 'html.parser')
+            # test_quanshen = data_soup.find_all('article')
+            for topic_header in data_soup.find_all(attrs='topic__header--section'):
+                print(topic_header.text.strip())
+        except IOError as e:
+            print(e)
+
+
+
 def main(args):
     if args is not None:
-        mf = MakeFolder()
-        mf.get_html()
-        mf.resolve_html()
+        # mf = MakeFolder()
+        # mf.get_html()
+        # mf.resolve_html()
+        dp = DataProcess()
+        dp.resolve_data()
         return 0
 
 
