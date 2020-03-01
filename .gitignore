@@ -115,7 +115,7 @@ env.bak/
 venv.bak/
 
 # ImportantSettings
-alpha/alpha/settings.py
+./alpha/alpha/settings.py
 
 # Spyder project settings
 .spyderproject
