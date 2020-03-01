@@ -85,8 +85,8 @@ DATABASES = {
         'NAME': 'ALPHA_TEST',
         'USER': 'root',
         'PASSWORD': '123456',
-        # Attention
-        'HOST': '116.62.101.1',
+        # Attentionzzzz
+        'HOST': '192.168.3.1',
         'PORT': '3306',
     }
 }
