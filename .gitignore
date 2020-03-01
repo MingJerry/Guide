@@ -101,7 +101,11 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# PycharmSetting
+.idea/
+
 # Environments
+GuideEnv/
 .env
 .venv
 env/
@@ -109,6 +113,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# ImportantSettings
+alpha/alpha/settings.py
 
 # Spyder project settings
 .spyderproject

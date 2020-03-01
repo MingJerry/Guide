@@ -106,7 +106,6 @@ class DataProcess(object):
             print(e)
 
 
-
 def main(args):
     if args is not None:
         # mf = MakeFolder()
