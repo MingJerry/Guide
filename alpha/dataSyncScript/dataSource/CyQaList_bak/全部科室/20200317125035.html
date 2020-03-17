@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="description" content="的相关问答">
+
+    
+	<meta name="keywords" content="，医患问答" />
+	
+
+
+    <title>相关问答-春雨医生</title>
+
+    
+    <link rel="shortcut icon" href="https://resource.chunyu.mobi/@/static/favicon.ico"/>
+    
+
+    <!--fis编译该 html 后自动引入的 css 放置位置-->
+        
+
+    
+	    <link rel="stylesheet" href="//static.chunyuyisheng.com/@/static/pc/pkg/seo_jinja/layout/base_aio_7c4504d.css" />
+
+    
+    <link rel="stylesheet" type="text/css" href="//static.chunyuyisheng.com/@/static/pc/css/seo/hot_qa_018abf1.css" />
+
+    
+
+    <!--项目公共head js放置区域-->
+</head>
+<body>
+
+
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="//static.chunyuyisheng.com/@/static/pc/css/seo/ie_pollify_2c51446.css"/>
+	<![endif]-->
+	 <div class="header-top-wrap">
+  <div class="ui-grid header-top">
+    <ul class="quick-menu">
+      <li class="menu-item menu-dropdown">
+        <a href="javascript:void(0)">用户端App</a>
+        <div class="qr-code-wrap">
+          <img src="//static.chunyuyisheng.com/@/static/pc/img/seo/qrcode_2a59fce.png" alt="春雨医生二维码">
+          <div class="content">
+            <span class="tit">春雨医生App</span>
+            <span class="sub-tit">扫描二维码</span>
+            <span class="sub-tit">安装春雨医生App</span>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item menu-dropdown">
+        <a href="javascript:void(0)">医生端App</a>
+        <div class="qr-code-wrap">
+          <img src="//static.chunyuyisheng.com/@/static/pc/img/seo/ysd_fa652b7.png" alt="春雨诊所二维码">
+          <div class="content">
+            <span class="tit">春雨诊所App</span>
+            <span class="sub-tit">扫描二维码</span>
+            <span class="sub-tit">安装春雨诊所App</span>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item menu-dropdown weixin-dropdown">
+        <a href="javascript:void(0)">微信公众号</a>
+        <div class="qr-code-wrap">
+          <div class="qr-item">
+            <img src="//static.chunyuyisheng.com/@/static/pc/img/seo/fwh_d0a0f86.png" alt="微信公众号二维码">
+            <div class="content">
+              <span class="tit">微信公众号</span>
+              <span class="sub-tit">扫描二维码</span>
+              <span class="sub-tit">关注春雨医生公众号</span>
+            </div>
+          </div>
+          <div class="qr-item qr-item-last">
+            <img src="//static.chunyuyisheng.com/@/static/pc/img/seo/xcx_d1dc5fc.png" alt="春雨医生小程序二维码">
+            <div class="content">
+              <span class="tit">小程序 春雨医生+</span>
+              <span class="sub-tit">扫描二维码</span>
+              <span class="sub-tit">无需下载快速问诊</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item menu-dropdown">
+        <a href="javascript:void(0)">企业版</a>
+        <div class="qr-code-wrap">
+          <img src="//static.chunyuyisheng.com/@/static/pc/img/seo/sm_app_b1edec3.png" alt="春雨医生企业版小程序码">
+          <div class="content">
+            <span class="tit">小程序 企业版</span>
+            <span class="sub-tit">扫描小程序码</span>
+            <span class="sub-tit">无须下载，直接使用</span>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item menu-normal"><a href="//m.chunyuyisheng.com/" target="_blank">触屏版</a></li>
+      <li class="menu-item menu-normal last"><a href="/clinic/register/"  target="_blank">医生入口</a></li>
+    </ul>
+  </div>
+</div> 
+
+	 
+	
+	<!-- 非 DTL 渲染方式时加载 header_bd 组件 -->
+	<div class="header-bd ui-grid clearfix">
+	<h1 class="logo">
+		<a href="/"><img src="//staff.chunyu.mobi/@/media/images/2019/08/08/3d62/3bcc44a84dee_w326_h94_.png" alt="春雨医生"></a>
+	</h1>
+	<div class="search-container">
+		<form action="/pc/search" autocomplete="off">
+			<input class="query" type="text" id="query" name="query" placeholder="搜医生、医院、疾病、症状、资讯" value="">
+			<button class="search-btn" type="submit"></button>
+		</form>
+	</div>
+	<div class="user-contanier ">
+	
+		<a class="login－wrap user-item" href="/ssl/api/weblogin/?next=/pc/qalist/%3Fhigh_quality%3D%26page%3D3">
+			<i class="icon-login"></i>
+			<span>登录</span>
+		</a>
+		<a class="register-wrap user-item" href="/register?next=/pc/qalist/%3Fhigh_quality%3D%26page%3D3">
+			<i class="icon-register"></i>
+			<span>注册</span>
+		</a>
+	
+	</div>
+</div>
+	
+	
+
+	 <div class="nav-list">
+	<ul class="ui-grid">
+		<li class="nav-item">
+			<a href="/">首页</a>
+		</li>
+    <li class="find-doc nav-item">
+			<a class="find-doc-btn" id="click_btn"  href="javascript:void(0)">找医生</a>
+      <!--style="display: none;-->
+      <ul class="btn-c-toggle not-display" id="btn_c_toggle" style="box-shadow: 0 2px 10px 0 rgba(153,180,162,0.33);">
+        <li class="nav-item nav-recommend no-back-g">
+          <a href="/pc/doctors/">按科室找医生</a>
+        </li>
+        <li class="nav-item no-back-g">
+          <a href="/pc/diseasesdoc/">按疾病找医生</a>
+        </li>
+        <li class="nav-item no-back-g">
+          <a href="/pc/hospitals/">按医院找医生</a>
+        </li>
+      </ul>
+		</li>
+
+		<li class="nav-item nav-hot-qa ">
+			<a href="/pc/hospitallist/0/0/">找医院</a>
+		</li>
+  	<li class="nav-item">
+			<a href="/pc/zhidaolist/">春雨知道</a>
+		</li>
+    <li class="nav-item  cur">
+			<a href="/pc/qalist/?high_quality=1">经典问答</a>
+		</li>
+		<li class="nav-item">
+			<a href="/pc/health_news/">健康资讯</a>
+		</li>
+		<li class="nav-item last">
+			<a href="/pc/disease/hot/">疾病知识库</a>
+		</li>
+	</ul>
+</div>
+<script>
+  var btn_c = document.getElementById('btn_c_toggle'),
+      click_btn = document.getElementById('click_btn'),
+      timer;
+  click_btn.addEventListener('mouseover', function() {
+      btn_c.classList.remove('not-display')
+      clearTimeout(timer)
+  })
+  click_btn.addEventListener('mouseleave', function() {
+    timer = setTimeout(
+      function () {
+        btn_c.classList.add('not-display')
+      },
+      200
+    )
+  })
+  btn_c.addEventListener('mouseover', function() {
+    clearTimeout(timer)
+  })
+  btn_c.addEventListener('mouseleave', function() {
+    timer = setTimeout(
+      function () {
+        btn_c.classList.add('not-display')
+      },
+      200
+    )
+  })
+</script> 
+
+	
+<div class="ui-grid ui-main clearfix">
+
+  <!--筛选部分-->
+  <!--一级科室-->
+  <div class="first-clinic">
+    <label>一级<br>科室：</label>
+    <ul class="tab-type-one j-tab-wrap">
+      <!--<label>一级<br>科室：</label>-->
+      <li class="tab-item  cur ">
+        <a href="/pc/qalist/?high_quality=">
+          全部科室
+        </a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_4/?high_quality=">皮肤性病科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_1/?high_quality=">妇科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_2/?high_quality=">儿科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_3/?high_quality=">内科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_8/?high_quality=">男科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_9/?high_quality=">外科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_7/?high_quality=">骨伤科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_12/?high_quality=">中医科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_13/?high_quality=">口腔颌面科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_15/?high_quality=">眼科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_14/?high_quality=">耳鼻咽喉科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_6/?high_quality=">营养科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_11/?high_quality=">肿瘤及防治科</a>
+      </li>
+      
+      <li class="tab-item">
+        <a href="/pc/qalist/clinicno_21/?high_quality=">产科</a>
+      </li>
+      
+    </ul>
+  </div>
+  <!--二级科室-->
+  <div class="sider-wrap dropdown-wrap">
+    <label>二级<br>科室：</label>
+    
+    <ul class="tab-type-one tab-type-free slider-item cur">
+      <li class="tab-item cur">
+        <a href="/pc/qalist/?high_quality=">
+          全部科室
+        </a>
+      </li>
+    </ul>
+    
+  </div>
+
+  <!--疾病-->
+  
+
+  <!--优质筛选-->
+  <div class="clearfix checkbox-choose">
+    
+    <a href="/pc/qalist/?page=1&high_quality=0">
+      <label class="available-switch checked">只显示优质回答</label>
+    </a>
+    
+  </div>
+
+  <!--主体部分-->
+  <hr>
+	<div class="main-wrap">
+		<div id="hotqa"><!--锚点定位--></div>
+		
+		<!--经典问答-->
+		
+		
+      
+<div class="hot-qa main-block">
+	
+	
+		<div class="hot-qa-item  first ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/yrZk8318nURaO0IVV8AD5g/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						怀孕33天吃感冒药和塞了药
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				您好，具体用了什么药物？ 现在好点没有？ 以后注意就行了，头三个月补充叶酸片，定期产检看看。 一般怀孕五十天左右才可以看出来的。 现在是检查不出来的，没有这种技术能力。如果怀孕早期，宝宝没有出现流产，一般这些药物对宝宝没有影响的。 您好，时间不早了，早点休息，有问题可以留言，明天看到后会回复您的，谢谢！
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>梁海峰</em>
+				广西医大开元埌东医院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/kVusOXg8MGmjuLgn3ks7DQ/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						吃完左炔诺孕酮片能直接进行房事吗
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				您好，很高兴为您提供帮助 您好，是可以的 可以，因为避孕药是同房后72小时内吃 现在吃药不超过3小时就有避孕效果 是的 如果吃的是毓婷就需要12小时后再服用一片 那就不需要再吃了 您好，如果超过三个小时是需要再吃 您好，避孕药只对这一次同房有用 是的 今天可以吃避孕药，一次就可以 是的 您好，在 今天可以吃避孕药 同房后72小时内吃就可以 吃了避孕药怀孕的几率不大 不客气，祝您健康 不客气
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>郑红英</em>
+				博兴县第二人民医院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/J8AAd0E9KMtc7zmPOgvOGQ/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						儿童皮下出血点,凝血时间延长,怎么办?
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				这种情况有多久了？有什么诱因吗？ 这都退了 不是出血点啊 是不是出血吸收后的？ 什么诊断？ 延长不多 一般不用担心 北京什么建议？ 出血点都在什么位置？ 不是过敏性紫癜 检查结果不能确诊 血常规正常 轻微异常 前三个 凝血异常导致的出血 现在不能确诊 也有可能没事 是的
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>朱晓明</em>
+				沭阳县中医院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/nP47ohWOUmJTR_Pq290IVg/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						直肠癌肛门有什么症状
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				直肠癌主要有粘液性脓血便，大便形状改变，大便规律改变，便秘、腹泻等。
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>李宇</em>
+				泰安市肿瘤防治院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/ki1BeY8xhdc3gs_oz_jRfw/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						5岁小孩小孩腋窝温度35.3度算正常吗?
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				你好 宝宝多大了 为什么测量体温 不正常 腋下正常36-37度 宝宝精神状态如何 食欲如何 大小便正常吗 有没有出汗 身体摸起来热吗 宝宝有没有其他不适 重新测量体温 腋下测量十分钟 可以导致 宝宝没有其他不适 可以多喝热水看看 注意保暖 需要看儿科急诊科医生测量血压 宝宝如果有头晕呕吐需要 循环不好，可以导致低体温，循环不好可以导致低血压 低血压可以头晕 第一次，如果宝宝没有头晕可以不测量血压
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>宿军</em>
+				珠海市第二人民医院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/ri_R4cKM_GCDiErEDf7kmw/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						刨妇产出院后全身冰冷什么原因
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				跟产后贫血体虚有关系。注意补充营养，注意保暖，不要着凉。 可以拿一点热水袋敷敷。 剖腹产出院后多少天了？ 注意量一下体温看看。 可以喝一点汤水看看。 也可以的。 不客气， 注意量一下体温看看。 如果您有相关问题，可以再次找我咨询，点击医生头像或在咨询列表搜索医生名字，就可以进入医生主页咨询了！
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>梁海峰</em>
+				广西医大开元埌东医院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/cmofPgBaCq35ltGBvJXKkQ/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						性交时阴茎顶到子宫口然后有一两滴血
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				你好 这种情况是正常的。 这个没关系。 可以再观察。 没有再继续出血就不要紧。 嗯嗯 有这么一点少量的出血，也说明不了什么。 是的 不用谢 一直出现这种情况，那就是不规则阴道出血。 不会一直出现的。 好的
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>孟凡喜</em>
+				威县妇幼保健计划生育中心
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/QiEy2cVIIZ3F3TFCaLmcrg/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						右脚大脚趾红肿,一碰就疼怎么回事
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				你好：很高兴为您解答 你好：这种情况多长时间了？ 考虑甲沟炎，建议您口服抗生素，热水泡脚，局部外用红霉素软膏
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>梁建全</em>
+				山西省荣军医院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/xjNNwvyPRAUpC8B4FX8LaA/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						膝盖有红点点洗澡就疼怎么回事
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				不会啊，别人都可以打的哦 表面破了没有呢？ 红点点多久了？其他地方还有没有 可能还是有微小的破损。接触水才会疼的哦。 你一天洗两次澡啊？ 风寒应该不是。 不行呢，平台有监管，不让的 不行啊。 我这边加你，那边平台就给我踢出去了呢。 你慢慢找找，看看怎么发，别人都能发的。 有可能是毛囊炎，会疼的。过敏一般都是瘙痒 不严重。 先观察，明天再看看。 早点睡
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>苏艳</em>
+				淮南市第一人民医院
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+		<div class="hot-qa-item ">
+			<div class="qa-item qa-item-ask">
+				<a href="/pc/qa/y4oBuhpzMrsofjMaSgQR9A/" target="_blank">
+					<i class="ask-tag">问</i>
+					
+						维磷补脑汁功效和负作用
+            
+          
+				</a>
+			</div>
+			<div class="qa-item qa-item-answer">
+				<i class="ask-tag answer-tag">答</i>
+				你好，很高兴为你解答 维磷补脑汁的功效主要是营养脑神经细胞和促进其活性，按照常规要求的剂量服用一般不会出现不良反应的，如果是超量或长期服用，不排除可能引起精神心理依赖和过度兴奋的副作用。根据自己的情况服用，对症治疗，减少症状，改善睡眠质量，科学饮食，注意休息。 不过这个也不建议长期服用，毕竟也是属于药物 如果只是开车疲劳，平时可以喝些公牛等功能饮料提神，不需要这个的 是因为什么睡眠不好呢 平时失眠吗，还是其他情况 你可以试着在睡觉前喝杯热牛奶，睡前半个小时就不要玩手机，电脑了，还可以用温水泡脚10分钟，这样都是有助于睡眠的 平时如果有时间，可以跑跑步，或者做做其他运动，这些都是有助于睡眠和身体健康的 能不吃药尽量不要吃药 你中午睡觉吗 估计是长时间开车的原因才犯困的 这个药对失眠效果不大的 失眠一般没有太好的办法，现在很多上班的人都会有这样的问题 或者你可以再去医院的神经内科咨询下有没有好的办法 白天你可以在犯困的时候喝点公牛试下，我觉得那个效果还不错 这个暂时可以先不试 那你喝咖啡呢 槟榔还是少吃比较好 你可以喝纯的咖啡试试，还有就是可以试试喝葡萄糖加水，这个也是有效果的 不客气，早点休息吧，新年快乐 嗯嗯。晚安咯 嗯
+			</div>
+			
+			<div class="qa-item qa-item-doctor">
+				<em>冯顺</em>
+				春雨公众营养专家团
+			</div>
+			
+			<span class="date">2018-12-31</span>
+		</div>
+	
+</div>
+
+    
+		
+		<!--分页器-->
+		
+			
+        <div class="pagebar">
+	 
+		<a class="prev" href="/pc/qalist/?high_quality=&amp;page=2#hotqa">上一页</a>
+	
+	<a  class="page" href="javascript:void(0)">3</a>
+	 
+		<a class="next" href="/pc/qalist/?high_quality=&amp;page=4#hotqa">下一页</a>
+	
+</div>
+      
+		
+	</div>
+	<div class="sidebar">
+		<h6 class="title">推荐专家</h6>
+		
+			
+<div class="doctor-info-item 
+	
+	
+	 first">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/clinic_web_f7a8f2531afb3194/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/a4e8/1348531cc474?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/clinic_web_f7a8f2531afb3194/" target="_blank">
+				<span class="name">蒋卫民&nbsp;</span>
+				<span class="clinic">感染科&nbsp;</span>
+				<span class="grade">主任医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/ac00f9b2a2ad5d4e/" target="_blank">
+				复旦大学附属华山医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">1106</i></span>
+			<span class="half-item">好评率（%）<i>98.9</i></span>
+		</div>
+		<p class="des">擅长：乙型肝炎、丙型肝炎等各种病毒性肝炎，脂肪肝，自身免疫性肝炎，黄疸待查，肝功能异常原因待查，肝硬化，病毒耐药的处置，肝衰竭的治疗等。不明原因发热，肺部感染，中枢神经系统感染，寄生虫感染等各种感染性疾病等。</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	 odd
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/clinic_neike_shuhuijun/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/2017/06/07/b3401b244e7e_w180_h180_.jpg?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/clinic_neike_shuhuijun/" target="_blank">
+				<span class="name">舒慧君&nbsp;</span>
+				<span class="clinic">消化内科&nbsp;</span>
+				<span class="grade">副主任医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/1f4a9d4915cffa55/" target="_blank">
+				北京协和医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">5787</i></span>
+			<span class="half-item">好评率（%）<i>100.0</i></span>
+		</div>
+		<p class="des">擅长：慢性胃炎、胃食管反流病、胃溃疡、便秘、结肠息肉；自身免疫性肝病（自身免疫性肝炎、原发性胆汁性肝硬化），胰腺炎，自身免疫性胰腺炎，克罗恩病，溃疡性结肠炎，消化内镜诊治消化系统常见病及疑难病。</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/58998f53bf4f78bd2631/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/be7a/e07374c1cad7?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/58998f53bf4f78bd2631/" target="_blank">
+				<span class="name">兰晶&nbsp;</span>
+				<span class="clinic">妇科&nbsp;</span>
+				<span class="grade">副主任医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/8dbb5f7d0c0820ef/" target="_blank">
+				复旦大学附属华山医院北院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">1220</i></span>
+			<span class="half-item">好评率（%）<i>99.2</i></span>
+		</div>
+		<p class="des">擅长：擅长各种妇产科常见病、多发病及急重症的诊治，青春期、生育期、围绝经期内分泌失调引起的月经不规则，女性生殖系统炎性疾病，子宫内膜异位症，产科各种并发症及合并症的治疗。</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	 odd
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/clinic_web_aed92eade0a7d786/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/d2bd/c2afbdf6866f?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/clinic_web_aed92eade0a7d786/" target="_blank">
+				<span class="name">范卫群&nbsp;</span>
+				<span class="clinic">妇科&nbsp;</span>
+				<span class="grade">主任医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/f0158d48cd797047/" target="_blank">
+				北京大学第三医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">1603</i></span>
+			<span class="half-item">好评率（%）<i>98.9</i></span>
+		</div>
+		<p class="des">擅长：宫颈癌、阴道炎、月经不调、子宫肌瘤、更年期综合症、流产</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/clinic_web_02090551007511e0/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/2018/05/21/8e21/bb5a3fa1426c_w317_h317_.jpg?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/clinic_web_02090551007511e0/" target="_blank">
+				<span class="name">李洁&nbsp;</span>
+				<span class="clinic">新生儿科&nbsp;</span>
+				<span class="grade">主治医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/c49efeabf7e81e6d/" target="_blank">
+				北京大学人民医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">33927</i></span>
+			<span class="half-item">好评率（%）<i>98.7</i></span>
+		</div>
+		<p class="des">擅长：血液病、小儿感冒、腹泻、幼儿急疹、母乳性黄疸、尿布皮炎</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	 odd
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/clinic_web_88722f35e987eaf1/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/2017/09/21/27f2b6052f47_w100_h100_.jpg?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/clinic_web_88722f35e987eaf1/" target="_blank">
+				<span class="name">谢明&nbsp;</span>
+				<span class="clinic">创伤科&nbsp;</span>
+				<span class="grade">主任医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/f0158d48cd797047/" target="_blank">
+				北京大学第三医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">2923</i></span>
+			<span class="half-item">好评率（%）<i>100.0</i></span>
+		</div>
+		<p class="des">擅长：骨折、骨拆不愈合、骨折感染、陈旧性骨折、腰腿疼痛、骨关节炎等的治疗。</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/clinic_web_376e3fa47942ae20/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/459e/08f40eb6ad3b?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/clinic_web_376e3fa47942ae20/" target="_blank">
+				<span class="name">陈俊峰&nbsp;</span>
+				<span class="clinic">呼吸内科&nbsp;</span>
+				<span class="grade">主治医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/0ffa82b555c3b892/" target="_blank">
+				解放军总医院（301医院）
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">1045</i></span>
+			<span class="half-item">好评率（%）<i>99.4</i></span>
+		</div>
+		<p class="des">擅长：擅长呼吸系统疾病，感冒，气管炎，慢阻肺，哮喘，支气管扩张，肺部感染性疾病，肺结节等</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	 odd
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/2850069c6438da793938/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/725c/2f6d7a4a291c?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/2850069c6438da793938/" target="_blank">
+				<span class="name">张硕&nbsp;</span>
+				<span class="clinic">神经内科&nbsp;</span>
+				<span class="grade">副主任医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/941713036bfc0886/" target="_blank">
+				中国医科大学附属盛京医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">4173</i></span>
+			<span class="half-item">好评率（%）<i>100.0</i></span>
+		</div>
+		<p class="des">擅长：癫痫，脑梗塞，焦虑抑郁状态，躯体化障碍，痴呆，脑血管病，短暂性脑缺血发作，脑出血，脑卒中，头痛，睡眠障碍，植物神经功能紊乱，高血压病，感染性脑炎脑膜炎，自身免疫性脑炎，认知记忆障碍，周围神经病变，阿尔茨海默病，痴呆，帕金森病，多发性硬化，视神经脊髓炎，中毒性脑病，格林巴利综合征，亚急性联合变性等脊髓疾病</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	
+	
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/clinic_web_1b4421229837fd76/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/2016/03/06/88f5f19cbda8_w565_h565_.jpg?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/clinic_web_1b4421229837fd76/" target="_blank">
+				<span class="name">胡其准&nbsp;</span>
+				<span class="clinic">泌尿外科&nbsp;</span>
+				<span class="grade">主治医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/f6175af4f04e802b/" target="_blank">
+				华中科技大学附属同济医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">5223</i></span>
+			<span class="half-item">好评率（%）<i>99.3</i></span>
+		</div>
+		<p class="des">擅长：前列腺炎，膀胱炎，尿道炎，肾结石，早泄，性功能障碍，鞘膜积液，膀胱癌，前列腺增生等</p>
+	</div>
+</div>
+
+<div class="doctor-info-item 
+	 odd
+	 last
+	">
+	<div class="avatar-wrap">
+		<a href="/pc/doctor/2fe6e8324a50945831ee/" target="_blank">
+			
+	        	<img src="https://resource.chunyu.mobi/@/media/images/2018/01/31/e06df253a44e_w415_h411_.jpg?imageMogr2/thumbnail/150x">
+	        
+		</a>
+		
+			<span class="available">可咨询</span>
+		
+	</div>
+	<div class="detail">
+		<div class="des-item">
+			<a class="name-wrap" href="/pc/doctor/2fe6e8324a50945831ee/" target="_blank">
+				<span class="name">应作霖&nbsp;</span>
+				<span class="clinic">皮肤科&nbsp;</span>
+				<span class="grade">副主任医师</span>
+			</a>
+		</div>
+		<div class="des-item">
+			<a class="hospital" href="/pc/hospital/fwzxotj53ma7idqc/" target="_blank">
+				上海市第一人民医院
+			</a>
+		</div>
+		<div class="des-item">
+			<span class="half-item">服务人次 <i class="color-black">4246</i></span>
+			<span class="half-item">好评率（%）<i>99.6</i></span>
+		</div>
+		<p class="des">擅长：性病、皮肤病、尖锐湿疣、梅毒、艾滋病、病毒感染</p>
+	</div>
+</div>
+
+		
+	</div>
+</div>
+
+
+	
+	
+	<!-- 非 DTL 渲染方式时加载 footer.html 组件 -->
+	<div class="ly-ft footer" id="footer">
+    <div class="inner">
+        <div class="ly-lst-contacts">
+            <a class="ly-contacts" target="_blank" href="/cooperation/vue_open_platform/">企业版</a>
+            <a class="ly-contacts" target="_blank" href="/cooperation/open_api/">开放平台</a>
+            <a class="ly-contacts" target="_blank" href="/about_us/">关于春雨</a>
+            <a class="ly-contacts" target="_blank" href="/api/news/chunyu/list/">公司动态</a>
+            <a class="ly-contacts" target="_blank" href="/recruitment/position_list/">加入春雨</a>
+            <a class="ly-contacts" target="_blank" href="/contact">联系我们</a>
+            <!--<a class="ly-contacts" target="_blank" href="/pedometer">春雨计步器</a>-->
+        </div>
+        <div class="ly-copyright">
+                <p>
+                    Copyright &copy; 2011-2020
+                    <a href="//www.chunyuyisheng.com/">北京春雨天下软件有限公司</a>
+                    All Rights Reserved
+                </p>
+            <p>京ICP证120150号  京ICP备12050281号-1</p>
+        </div>
+        <div class="footer-copyright">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020212">
+                <img src="//static.chunyuyisheng.com/@/media/images/2016/03/10/bede9876c388_w20_h20_.png"/>
+                <p>京公网安备 11010802020212号</p>
+            </a>
+        </div>
+        <div class="ly-copyright">
+                <p>违法和不良信息举报：4000018855转9 feedback@chunyu.me</p>
+        </div>
+    </div>
+</div>
+	
+	
+
+
+
+
+<script type="text/javascript" src="//static.chunyuyisheng.com/@/static/pc/pkg/common/common_pkg_6c99336.js"></script>
+<script type="text/javascript">/*resourcemap*/
+</script>
+
+
+<!--[if lte IE 8]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+<![endif]-->
+
+
+
+	<script type="text/javascript" src="//static.chunyuyisheng.com/@/static/pc/js/seo/hot_qa_31fda01.js"></script>
+
+
+	<script>
+    (function() {
+        var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?c153f37e6f66b16b2d34688c92698e4b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+ 
+</body>
+</html>
