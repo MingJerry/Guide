@@ -218,20 +218,20 @@ class DataProcess(object):
 
 
 def main(args):
-    if args is not None:
-        # mf = MakeFolder()
-        # mf.make_root_folder()
-        # mf.make_child_folder()
-        dp = DataProcess()
-        # dp.resolve_data('qa-item qa-item-answer')
-        dp.resolve_qa_data()
-        # dp.resolve_a_data()
-        return 0
+    if args.enable:
+        mf = MakeFolder()
+        mf.make_root_folder()
+        mf.make_child_folder()
+    dp = DataProcess()
+    # dp.resolve_data('qa-item qa-item-answer')
+    dp.resolve_qa_data()
+    # dp.resolve_a_data()
+    return 0
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-e", '--disable', help="disable mkdir folder", action='store_true')
+    parser.add_argument("-e", '--enable', help="disable mkdir folder", action='store_true')
     cmd_args = parser.parse_args()
     err_code = main(cmd_args)
     exit(err_code)
