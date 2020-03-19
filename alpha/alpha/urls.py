@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from alphatest import views as alphatest_view
 from one import views as one_view
+from dataManage import views as dm_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('test/', alphatest_view.index),
-    path('trans/', one_view.trans_home, name='trans_home')
+    path('trans/', one_view.trans_home, name='trans_home'),
+
+    path('alpha/data-manage/', dm_view.alpha_data_manage, name='data_manage')
 ]
