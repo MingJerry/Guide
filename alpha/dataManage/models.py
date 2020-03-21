@@ -1,3 +1,12 @@
 from django.db import models
 
-# Create your models here.
+
+class QaList(models.Model):
+    QAINDEX = models.IntegerField(primary_key=True)
+    CLINIC = models.TextField()
+    QUESTION = models.TextField()
+    ANSWER = models.TextField()
+    SNAPSHOT = models.DateField()
+
+    def __str__(self):
+        return self.CLINIC
