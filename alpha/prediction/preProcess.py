@@ -1,6 +1,6 @@
 import os
 import urllib
-import numpy, keras
+import numpy as np, keras
 import re
 from random import randint
 import pandas as pd
@@ -52,6 +52,8 @@ class DataPreProcess(object):
                             "骨伤科": 14,
                             "全部科室": 15}
 
+        self.clinic_code_T = {value: key for key, value in self.clinic_code.items()}
+
         self.sql_select_qa = """SELECT * FROM dataManage_qalist"""
         self.qa = pd.read_sql(sql=self.sql_select_qa, con=self.conn)
         alpha_logger.info("DataPreProcess loading...\n----------------------")
@@ -88,7 +90,7 @@ class DataPreProcess(object):
         alpha_logger.info("\n %s", qa.head(n=2))
         alpha_logger.info("Divide & Tag & Sequence Complete.")
         train_data = (q_seq_array, clinic_tag_array)
-        return qa, train_data
+        return qa, train_data, token
         # print(qa.head()
 
     def model_train(self, n_lay, key_num, word_len, out_lay, train):
@@ -110,8 +112,13 @@ class DataPreProcess(object):
         history_q = model_question.fit(x=train_x, y=train_y, validation_split=0.2, epochs=10, batch_size=128, verbose=1)
         alpha_logger.info("Model Train Completed.")
         self.plot_model(history_q)
+        # prediction = model_question.predict(train_x)
+        # print(prediction[0])
 
-    def plot_model(self, history):
+        return model_question
+
+    @staticmethod
+    def plot_model(history):
         import matplotlib.pyplot as plt
 
         acc = history.history['acc']
@@ -143,11 +150,61 @@ class DataPreProcess(object):
 
         alpha_logger.info("Plot Completed")
 
+    def test_model(self, model, test, source_text, i):
+        test_x, test_y = test
+        print(source_text.iloc[i]["QUESTION"])
+        predict_clinic = model.predict(test_x)
+        print("Real Label: ", source_text.iloc[i]["CLINIC"],
+              "Predict Label: ", self.clinic_code_T[np.argmax(predict_clinic[i])])
+
+
+class PreTrigger(object):
+    def __init__(self, token_x, model_x):
+        self.token_pre = token_x
+        self.model_pre = model_x
+
+        self.pre_clinic_code = {"中医科": 1,
+                                "产科": 2,
+                                "儿科": 3,
+                                "内科": 4,
+                                "口腔颌面科": 5,
+                                "外科": 6,
+                                "妇科": 7,
+                                "男科": 8,
+                                "皮肤性病科": 9,
+                                "眼科": 10,
+                                "耳鼻咽喉科": 11,
+                                "肿瘤及防治科": 12,
+                                "营养科": 13,
+                                "骨伤科": 14,
+                                "全部科室": 15}
+
+        self.pre_clinic_code_T = {value: key for key, value in self.pre_clinic_code.items()}
+
+    def pre_for_input(self, input_x):
+        print(input_x)
+        input_list = [jb.lcut_for_search(input_x)]
+        input_x_seq = self.token_pre.texts_to_sequences(input_list)
+        print(input_x_seq)
+        input_x_pad = keras.preprocessing.sequence.pad_sequences(input_x_seq, padding='post', truncating='post', maxlen=50)
+        print(input_x_pad)
+        output_x = self.model_pre.predict(input_x_pad)
+        print("Predict Output:", self.pre_clinic_code_T[np.argmax(output_x)])
+
+        return 0
+
 
 if __name__ == '__main__':
     # 分词
     data_pre = DataPreProcess(mysql_db_config)
-    qa_, train_data_ = data_pre.divide_q()
-    data_pre.model_train(n_lay=32, key_num=6000, word_len=50, out_lay=16, train=train_data_)
+    qa_, train_data_, token_ = data_pre.divide_q()
+    Q_model = data_pre.model_train(n_lay=32, key_num=6000, word_len=50, out_lay=16, train=train_data_)
     alpha_logger.info("PreProcessing completed.")
+    data_pre.test_model(Q_model, train_data_, qa_, 0)
+    trigger = PreTrigger(token_x=token_, model_x=Q_model)
+    trigger.pre_for_input("手淫导致尿痛是尿道炎吗?")
+
+
+
+
 

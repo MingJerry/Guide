@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="page-header">Demo</h1>
+
+  <form role="form">
+      <h2>输入您要咨询的症状</h2>
+      <div class="form-group">
+          <textarea id="clinicQ" class="form-control" rows="5" placeholder="请描述你的症状">
+          </textarea>
+      </div>
+      <h2>建议所挂科室</h2>
+      <div class="form-group">
+          <textarea id="clinicA" class="form-control" rows="1">
+          </textarea>
+      </div>
+  </form>
+<!--    <input type="text" placeholder="请描述你的症状...">-->
+
+<!--  <input type="text" placeholder="建议您挂XX科室">-->
+{% endblock %}

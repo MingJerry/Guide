@@ -30,5 +30,6 @@ urlpatterns = [
     path('alpha/data-manage/', dm_view.alpha_data_manage, name='data_manage'),
     path('alpha/data-manage/admin/', dj_admin.site.urls),
     # path('alpha/data-manage/xm-admin', xm_admin.site.urls),
-    path('alpha/data-manage/console/', dm_view.alpha_data_console, name='data_console')
+    path('alpha/data-manage/console/', dm_view.alpha_data_console, name='data_console'),
+    path('alpha/data-manage/demo/', dm_view.alpha_demo, name='data_demo')
 ]
