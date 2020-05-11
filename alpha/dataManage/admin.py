@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import QaList
+from .models import QaList, QuestionDemo
 
 
 class QaListAdmin(admin.ModelAdmin):
@@ -10,4 +10,5 @@ class QaListAdmin(admin.ModelAdmin):
 
 
 admin.site.register(QaList, QaListAdmin)
+admin.site.register(QuestionDemo)
 

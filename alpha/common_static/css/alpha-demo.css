@@ -1,0 +1,9 @@
+.alpha-button {
+    float: right;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: 400;
+    color:#fff;
+    background: #428bca;
+}

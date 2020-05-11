@@ -14,12 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin as dj_admin
-from django.urls import path
+from django.urls import path, include
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.views import serve
 from alphatest import views as alphatest_view
 from one import views as one_view
 from dataManage import views as dm_view
+from rest_framework import routers
 
 urlpatterns = [
     # path('favicon.ico', serve, {'path': 'common_static/images/favicon.ico'}),
@@ -31,5 +32,8 @@ urlpatterns = [
     path('alpha/data-manage/admin/', dj_admin.site.urls),
     # path('alpha/data-manage/xm-admin', xm_admin.site.urls),
     path('alpha/data-manage/console/', dm_view.alpha_data_console, name='data_console'),
-    path('alpha/data-manage/demo/', dm_view.alpha_demo, name='data_demo')
+    path('alpha/data-manage/demo/', dm_view.alpha_demo, name='data_demo'),
+
+    path('model-api/alpha-demo/save_and_run/', dm_view.AlphaDemoViewSet.save_and_run)
+
 ]

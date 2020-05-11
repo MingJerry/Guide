@@ -1,20 +1,101 @@
 {% extends "base.html" %}
+{% block style %}
+<style type="text/css">
+#errorSnackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #ed4337;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#errorSnackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+</style>
+{% endblock %}
+
 {% block content %}
-  <h1 class="page-header">Demo</h1>
-
-  <form role="form">
-      <h2>输入您要咨询的症状</h2>
-      <div class="form-group">
-          <textarea id="clinicQ" class="form-control" rows="5" placeholder="请描述你的症状">
-          </textarea>
-      </div>
-      <h2>建议所挂科室</h2>
-      <div class="form-group">
-          <textarea id="clinicA" class="form-control" rows="1">
-          </textarea>
-      </div>
-  </form>
+<h1 class="page-header">Demo</h1>
+<div>
+    <div>
+        <h2>输入您要咨询的症状</h2>
+        <div class="form-group">
+            <textarea id="clinicQ" name="zhengzhuang" class="form-control" rows="5" placeholder="请描述你的症状">
+            </textarea>
+        </div>
+        <div class="submit-row">
+            <button id="saveAndRunButton" type="button" class="btn btn-default btn-success" style="width:120px;" onclick="saveAndRun();">Sava And Run</button>
+        </div>
+    </div>
+  <h2>建议所挂科室</h2>
+      <textarea id="clinicA" class="form-control" rows="1" readonly>
+      </textarea>
+</div>
+<div id="errorSnackbar"></div>
 <!--    <input type="text" placeholder="请描述你的症状...">-->
-
 <!--  <input type="text" placeholder="建议您挂XX科室">-->
+{% endblock %}
+{% block js %}
+<script>
+var question_user = null;
+var answer_user = null;
+var quest_datetime = null;
+var pre_method = null;
+
+function timeoutRequest(route)
+{
+    //startLoading();
+    var callback = function(data){
+        //stopLoading();
+
+        if(data["clinicA"]){
+            var clinicA = data["clinicA"]
+            document.getElementById("clinicA").value=clinicA
+        }
+        else{
+            document.getElementById("clinicA").value="NO"
+        }
+
+	};
+
+	var errorCallback=function(){
+	    showErrorSnackbarMessage("Failure: Timeout reached (120 seconds)");
+	}
+	$.ajax({
+        url: route,
+        dataType: 'json',
+        success: callback,
+        timeout: 1200000,
+        error: errorCallback
+    });
+}
+
+function showErrorSnackbarMessage(message) {
+        var x = document.getElementById("errorSnackbar");
+        $("#errorSnackbar").text(message);
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function loadParameters(){
+}
+
+function saveAndRun() {
+    timeoutRequest("/model-api/alpha-demo/save_and_run");
+}
+$(function(){
+});
+
+</script>
 {% endblock %}
