@@ -1,14 +1,11 @@
 import os
-import urllib
-import numpy as np, keras
-import re
-from random import randint
-import pandas as pd
+import pickle as pk
 import jieba as jb
-import datetime
-import argparse
-from dataSyncScript.config.db_config import mysql_db_config
+import keras
+import numpy as np
+import pandas as pd
 from sqlalchemy import create_engine
+from dataSyncScript.config.db_config import mysql_db_config
 from logger import alpha_logger
 
 
@@ -90,6 +87,11 @@ class DataPreProcess(object):
         alpha_logger.info("\n %s", qa.head(n=2))
         alpha_logger.info("Divide & Tag & Sequence Complete.")
         train_data = (q_seq_array, clinic_tag_array)
+
+        token_pk_file = open('./token_pk.pkl', 'wb')
+        pk.dump(token, token_pk_file)
+        token_pk_file.close()
+
         return qa, train_data, token
         # print(qa.head()
 
@@ -114,6 +116,8 @@ class DataPreProcess(object):
         self.plot_model(history_q)
         # prediction = model_question.predict(train_x)
         # print(prediction[0])
+
+        model_question.save('./kara_model_q.h5')
 
         return model_question
 
@@ -162,7 +166,6 @@ class PreTrigger(object):
     def __init__(self, token_x, model_x):
         self.token_pre = token_x
         self.model_pre = model_x
-
         self.pre_clinic_code = {"中医科": 1,
                                 "产科": 2,
                                 "儿科": 3,

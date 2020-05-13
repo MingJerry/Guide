@@ -1,3 +1,5 @@
+keras
+numpy
 djangorestframework
 matplotlib
 jieba

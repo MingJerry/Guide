@@ -9,6 +9,8 @@ from rest_framework.response import Response
 from django.http import JsonResponse
 from rest_framework.views import APIView
 from .models import QuestionDemo
+from prediction.kerasClassify import Trigger
+from prediction.kerasClassify import save_in_qa_admin
 import base64
 
 
@@ -44,15 +46,36 @@ class AlphaDemoSerializer(serializers.HyperlinkedModelSerializer):
 
 class AlphaDemoViewSet(APIView):
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.GET = None
+
     @csrf_exempt
-    @list_route(methods=['post'], renderer_classes=(renderers.JSONRenderer,))
+    @list_route(methods=['get'], renderer_classes=(renderers.JSONRenderer,))
     def save_and_run(self):
         # from prediction.preProcess import trigger
         #
         # trigger.pre_for_input(self.POST['zhengzhuang'])
-        print("OK")
+        question = self.GET["q"]
+        tg = Trigger(question)
+        ans = tg.pre_for_input()
+        print(ans)
         return JsonResponse(data={"status": 1,
                                   "message": "Prediction Update Success",
-                                  "clinicA": "OK"
+                                  "clinicA": ans
                                   })
 
+    @csrf_exempt
+    @list_route(methods=['get'], renderer_classes=(renderers.JSONRenderer,))
+    def save(self):
+        # from prediction.preProcess import trigger
+        #
+        # trigger.pre_for_input(self.POST['zhengzhuang'])
+        question = self.GET["q"]
+        answer = self.GET["a"]
+        print(answer)
+        save_in_qa_admin(question, answer)
+        return JsonResponse(data={"status": 1,
+                                  "message": "Save Right Answer Success",
+                                  "clinicA": answer
+                                  })

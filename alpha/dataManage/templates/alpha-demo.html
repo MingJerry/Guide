@@ -35,7 +35,9 @@
             </textarea>
         </div>
         <div class="submit-row">
-            <button id="saveAndRunButton" type="button" class="btn btn-default btn-success" style="width:120px;" onclick="saveAndRun();">Sava And Run</button>
+            <button id="saveAndRunButton" type="button" class="btn btn-default btn-success" style="width:120px;" onclick="saveAndRun();">Run</button>
+            <button id="modifyButton" type="button" class="btn btn-default btn-success" style="width:120px;" onclick="modify();">Modify</button>
+            <button id="saveButton" type="button" class="btn btn-default btn-success" style="width:120px;" onclick="save();">Save</button>
         </div>
     </div>
   <h2>建议所挂科室</h2>
@@ -92,8 +94,19 @@ function loadParameters(){
 }
 
 function saveAndRun() {
-    timeoutRequest("/model-api/alpha-demo/save_and_run");
+    question_user = document.getElementById("clinicQ").value;
+    timeoutRequest("/model-api/alpha-demo/save_and_run?q="+question_user);
 }
+function save(){
+    question_user = document.getElementById("clinicQ").value;
+    answer_user = document.getElementById("clinicA").value;
+    timeoutRequest("/model-api/alpha-demo/save?q="+question_user+"&a="+answer_user);
+}
+
+function modify(){
+    document.getElementById("clinicA").removeAttribute("readOnly");
+}
+
 $(function(){
 });
 

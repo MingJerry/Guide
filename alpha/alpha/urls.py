@@ -34,6 +34,7 @@ urlpatterns = [
     path('alpha/data-manage/console/', dm_view.alpha_data_console, name='data_console'),
     path('alpha/data-manage/demo/', dm_view.alpha_demo, name='data_demo'),
 
-    path('model-api/alpha-demo/save_and_run/', dm_view.AlphaDemoViewSet.save_and_run)
+    path('model-api/alpha-demo/save_and_run/', dm_view.AlphaDemoViewSet.save_and_run),
+    path('model-api/alpha-demo/save/', dm_view.AlphaDemoViewSet.save)
 
 ]

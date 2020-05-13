@@ -21,3 +21,13 @@ class QuestionDemo(models.Model):
 
     def __str__(self):
         return self.QUESTION_USER
+
+
+class QaAdmin(models.Model):
+    Qa_INDEX = models.AutoField(primary_key=True)
+    QUESTION_ADMIN = models.TextField()
+    ANSWER_ADMIN = models.TextField()
+    QA_DATETIME = models.DateTimeField('date published')
+
+    def __str__(self):
+        return self.QUESTION_ADMIN
