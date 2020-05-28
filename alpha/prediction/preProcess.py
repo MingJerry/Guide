@@ -109,7 +109,7 @@ class DataPreProcess(object):
         alpha_logger.info(model_question.summary())
         alpha_logger.info("Model Train Config load Completed.")
 
-        alpha_logger.info("Model Train Starting...")
+        alpha_logger.info("Model  Starting...")
         model_question.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
         history_q = model_question.fit(x=train_x, y=train_y, validation_split=0.2, epochs=10, batch_size=128, verbose=1)
         alpha_logger.info("Model Train Completed.")

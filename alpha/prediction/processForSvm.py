@@ -284,9 +284,9 @@ class SVMTrigger(object):
 
     def multi_classify(self, features, labels, df):
         models = [
-            RandomForestClassifier(n_estimators=200, max_depth=3, random_state=0),
+            # RandomForestClassifier(n_estimators=200, max_depth=3, random_state=0),
             LinearSVC(),
-            MultinomialNB(),
+            # MultinomialNB(),
             LogisticRegression(random_state=0),
         ]
         CV = 5
